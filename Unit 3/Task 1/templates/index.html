@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<h1>Input Values for Prediction</h1>
+<br>
+
+    
+<form action="{{ url_for('predict')}}" method="post">
+
+    <input class="form-control" type="name" name='name' id='name' placeholder="Name" aria-label="Name">
+    <br>
+    <input class="form-control" type="hours_you_slep" name='hours_you_slep' id='hours_you_slep' placeholder="Hours you slep" aria-label="Hours you slep">
+    <br>
+    <br>
+    <button type="submit" class='btn btn-primary'>Submit</button>
+    <a class="btn btn-primary" href ='/'>reset</a>
+</form>
+
+    <br>
+    <br>
+   
+{% endblock %}

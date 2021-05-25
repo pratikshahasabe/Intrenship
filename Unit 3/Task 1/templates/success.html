@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Succcess</title>
+{% endblock %}
+
+{% block body %}
+<h1>predicted result</h1>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+        <br>
+        <br>
+        <br>
+
+        <a class="btn btn-primary" href ='/'>reset</a>
+        <br>
+    
+
+{% endblock %}
