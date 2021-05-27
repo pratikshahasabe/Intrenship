@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<h1>Sentiment Analysis</h1>
+<br>
+
+    
+<form action="{{ url_for('predict')}}" method="post">
+
+    <input class="form-control" type="book_you_read" name='book_you_read' id='book_you_read' placeholder="Book you read" aria-label="Book_you_read">
+    <br>
+    <textarea
+            name="text"
+            placeholder="Enter the paragraph here..."
+            required="required"
+            cols="122"
+            rows="10"
+          ></textarea>
+    <br>
+    <button type="submit" class='btn btn-primary'>Submit</button>
+    <a class="btn btn-primary" href ='/'>reset</a>
+</form>
+
+    <br>
+    <br>
+   
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Succcess</title>
+{% endblock %}
+
+{% block body %}
+<h1>Sentiment Analysis of Paragraph</h1>
+
+<br>
+<br>
+<h2>Segment the Paragraph into Sentences </h2>
+
+{% for table in tab %}
+{{titles[loop.index]}}
+{{ table|safe }}
+{% endfor %}
+<br>
+<h2>Sentiment score for each sentence in a tabular format. </h2>
+{% for table in tables %}
+{{titles[loop.index]}}
+{{ table|safe }}
+{% endfor %}
+<br>
+<h2>Sentiment score for whole paragraph </h2>
+{{output}}
+<br>
+<br>
+
+<a class="btn btn-primary" href='/'>reset</a>
+<br>
+
+
+{% endblock %}
